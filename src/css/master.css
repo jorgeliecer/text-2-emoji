@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Slabo 27px', serif;*/
+  font-size: 100%;
+  min-height: 100vh;
+  background: #fff;
+  font-weight: 300;
+}
+img.emoji {
+  width: 32px;
+}
+a {
+  color: #83EEC4;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+div.layer-menu {
+  width: 100%;
+  height: 100vh;
+  background: #83EEC4;
+  position: fixed;
+  z-index: 2;
+  -webkit-clip-path: circle(0% at 50% 90%);
+  clip-path: circle(0% at 50% 90%);
+  display: none;
+}
+div.layer-menu div.container {
+  padding: 3em 8em;
+  text-align: center;
+}
+div.layer-menu div.container img.me {
+  display: inline-block;
+}
+div.layer-menu div.container p.explain {
+  text-align: left;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+span.translate {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #000;
+  color: white;
+  padding: 4px;
+  font-size: 10px;
+}
+.info {
+  padding-top: 2em;
+}
+/*div.header {
+text-align: center;
+padding: 3em;
+width: 100%;
+height: 64px;
+position: absolute;
+top: 0;
+background: #83EEC4;
+}
+div.header p {
+margin-top: 2em;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.1em;
+font-weight: 100;
+color: #555;
+}*/
+
+div.background-footer {
+  background: url(../images/bg.png);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-position: center 0%;
+  height: 20%;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
+}
+
+div.footer {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  bottom: 0;
+  position: fixed;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #00FFD5;
+  z-index: 2;
+}
+div.footer img.jooz {
+  padding: 1em 4em 1em 4em;
+  display: block;
+}
+div.footer div.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  font-size: 4em;
+  color: #83EEC4;
+}
+
+/* BASE CSS */
+[contenteditable="true"]:focus {
+  outline: none;
+}
+.editor-container {
+  width: 100%;
+  position: absolute;
+  max-height: 80%;
+  /*background: red;*/
+  overflow: auto;
+}
+.editor-container .inner {
+  /*border-left: 1px solid #fdf;
+  border-right: 1px solid #fdf;*/
+  padding: 4em;
+  margin: 0 2em;
+}
+.editor-container .inner .hello {
+  text-align: center;
+  color: #333;
+  font-size: 0.8em;
+}
+.editor {
+  font-weight: 300;
+  font-size: 1.9em;
+  min-height: 200px;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  white-space: pre-wrap;
+  font-stretch: ultra-condensed;
+  letter-spacing: -0.05em;
+  color: #777;
+  z-index: 1;
+  position: relative;
+  padding: 1em;
+}
+.editor img {
+  border: none;
+}
+
+/* debug */
+.editor-bar {
+  /*background-color: #83EEC4;*/
+  /* border-top: 1px solid #ccc; */
+  /* padding: 0.5em; */
+  position: fixed;
+  width: 100%;
+  /*height: 54px;*/
+  top: 0;
+  /*color: white;*/
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  /* display: none; */
+}
+.editor-bar div.at-right {
+  float: right;
+  display: inline-block;
+  padding-top: 7px;
+  padding-right: 1em;
+}
+.editor-bar span {
+  /*font-size: 0.7em;*/
+  /*font-weight: 400;*/
+  display: inline-block;
+  margin: 1em;
+  border-radius: 0.5em;
+  background-color: #83EEC4;
+  color: white;
+  padding: 0.5em;
+  /*text-align: center;*/
+  /*padding: 1em;*/
+}
+
+
+@media (max-width: 800px) {
+  .editor-container .inner {
+    padding: 4em 1em;
+  }
+}
+
+@media (max-width: 620px) {
+  .editor-container .inner {
+    padding: 4em 0;
+  }
+  div.layer-menu {
+    position: absolute;
+    margin-bottom: 6em;
+    height: 100%;
+  }
+  .editor {
+    /*font-size: 1.8em;*/
+    border: none;
+    padding: 0.5em;
+  }
+  div.footer {
+    border: none;
+  }
+  div.footer img.jooz {
+    display: none;
+    margin: 0;
+  }
+  .background-footer {
+    display: none;
+  }
+  div.footer div.menu {
+    font-size: 3em;
+  }
+  .editor-container {
+    max-height: 90%;
+  }
+  .editor-container .inner {
+    margin: 0 1em;
+  }
+  div.layer-menu div.container {
+    padding: 3em 2em;
+    overflow: auto;
+  }
+  div.layer-menu div.container p.explain {
+    font-size: 1.1em;
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "text2emojiv2",
+  "version": "1.0.0",
+  "description": "Deploy & build project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/gocodegeorge/text2emoji.git"
+  },
+  "author": "Jorge Osorio",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/gocodegeorge/text2emoji#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-htmlmin": "^2.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-minjson": "^0.4.0",
+    "grunt-obfuscator": "^0.1.0",
+    "grunt-processhtml": "^0.4.1"
+  },
+  "dependencies": {
+    "zopflipng-bin": "^4.1.0"
+  }
+}

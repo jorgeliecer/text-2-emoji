@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="curious" content="Why So Curious? jorge.osorio.caro@gmail.com">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Text2Emoji</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet"> -->
+
+  <!-- build:css css/master.css -->
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/master.css">
+  <!-- /build -->
+
+  <!-- build:js script/core.js -->
+  <script src="scripts/vendors/zepto.js" charset="utf-8"></script>
+  <script src="scripts/vendors/rangy/rangy-core.js" charset="utf-8"></script>
+  <script src="scripts/vendors/rangy/rangy-textrange.js" charset="utf-8"></script>
+  <script src="scripts/tools.js" charset="utf-8"></script>
+  <script src="scripts/parsers/words_parser.js" charset="utf-8"></script>
+  <script src="scripts/parsers/rangy_words_parser_wrapper.js" charset="utf-8"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
+  <!-- /build -->
+
+</head>
+<body>
+  <div class="layer-menu">
+    <div class="container">
+      <!-- <p><img src="images/me.png" alt="me" class="me"/></p>
+      <h3>Texto EMOJI</h3> -->
+      <p class="explain">
+        <h1>Text2Emoji: Traductor a emoji</h1>
+        <strong>Inspirado en <a href="https://www.youtube.com/watch?v=hGxztjhFofg&feature=youtu.be" target="_blank">Roger Federer’s Emoji overdrive</a> Text2Emoji es una herramienta que convierte texto a íconos.<br/>Aunque es algo divertido, por ahora no tiene mucha utilidad.</strong>
+        <br/>
+        <p>* * *</p>
+        El verbo (Ser/Estar) es un símbolo de igual = en vertical ||. Mientras que las acciones de tiempo (Presente, Pasado y Futuro) están denomidas con flechas y sigue la estructura (Verbo + Tiempo).
+        <!-- <table align="center">
+          <tr>
+            <th>Ser ó estár</th>
+            <td>
+              <img class="emojione emojione-23f8" src="images/fff.png">
+            </td>
+            <th>Presente</th>
+            <td>
+              <img class="emojione emojione-2935" src="images/fff.png">
+            </td>
+            <th>Pasado</th>
+            <td>
+              <img class="emojione emojione-21a9" src="images/fff.png">
+            </td>
+            <th>Futuro</th>
+            <td>
+              <img class="emojione emojione-21aa" src="images/fff.png">
+            </td>
+          </tr>
+        </table> -->
+        <!-- <h3>Ejemplos</h3> -->
+        <p>
+          <img class="emoji" src="images/emojione/1f64b.png"> <img class="emoji" src="images/emojione/23f8.png"><img class="emoji" src="images/emojione/21a9.png"> <img class="emoji" src="images/emojione/1f914.png"><img class="emoji" src="images/emojione/2935.png">
+          <br/>
+          <span class="translate">Yo estaba pensando</span>
+        </p>
+        <p class="info">
+          Text2Emoji es una idea de <a href="http://jooz.co">jooz.co</a> <i class="ion-ios-paperplane-outline" style="font-size: 1em;"></i> <a href="mailto:jorge.osorio.caro@gmail.com">jorge.osorio.caro<i class="ion-at"></i>gmail.co</a>
+          <br/>
+          Si te gustaría contribuir a mejorar un poco el idioma visita esta página <br/>
+          <a href="https://github.com/jorgeliecer/text2emoji-lang" target="_blank">Text2Emoji<i class="ion-at"></i><i class="ion-social-github"></i></a>
+        </p>
+        <p class="year">2016</p>
+        <div class="fb-share-button" data-href="http://text2emoji.jooz.co" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftext2emoji.jooz.co%2F&amp;src=sdkpreparse">Share</a></div>
+      </p>
+    </div>
+  </div>
+  <div class="editor-bar">
+    <span id="caret_word"></span>
+    <!-- <p id="caret_position"></p> -->
+    <!-- <p id="caret_range"></p> -->
+    <!-- <div class="at-right">
+
+    </div> -->
+  </div>
+  <!-- <div class="header"> -->
+    <!-- <img src="images/logo.png" alt="logo" /> -->
+    <!-- <p>Escribe mientras nosotros vamos traduciendo al idioma EMOJI.</p> -->
+  <!-- </div> -->
+  <div class="editor-container">
+    <!-- <p id="caret_word"></p> -->
+    <div class="inner">
+      <div class="animated flipInX hello"><i class="ion-ios-lightbulb-outline"></i> Escribe un texto para traducir a Emoji</div>
+      <div class="editor" contenteditable="true" id="editorRef"></div>
+    </div>
+  </div>
+  <div class="footer animated slideInUp">
+    <img src="images/jooz.png" alt="jooz" class="jooz" />
+    <div class="menu"><i id="menu-icon" class="ion-ios-help"></i></div>
+  </div>
+  <div class="background-footer"></div>
+  <div id="fb-root"></div>
+  <!-- <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1464030987221621";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-84485773-2', 'auto');
+    ga('send', 'pageview');
+  </script> -->
+</body>
+</html>
